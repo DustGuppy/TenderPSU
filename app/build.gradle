@@ -1,17 +1,9 @@
 apply plugin: 'com.android.application'
-apply plugin: 'maven'
-apply plugin: 'signing'
-
 
 android {
-    compileSdkVersion Integer.parseInt(project.TARGET_SDK_VERSION)
-    buildToolsVersion '25.0.2'
-
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
     defaultConfig {
-        minSdkVersion MIN_SDK_VERSION
-        targetSdkVersion project.TARGET_SDK_VERSION
-        versionCode Integer.parseInt(project.VERSION_CODE)
-        versionName project.VERSION_NAME
         applicationId "io.tender.tenderio"
         minSdkVersion 16
         targetSdkVersion 25
@@ -36,15 +28,12 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     //compile 'com.google.android.gms:play-services-maps:10.2.99'
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.facebook.android:facebook-android-sdk:4.21.1'
     compile 'com.android.support:design:25.0.0'
 
 
     testCompile 'junit:junit:4.12'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':library')
-    compile 'com.jakewharton:butterknife:8.5.1'
 }
 

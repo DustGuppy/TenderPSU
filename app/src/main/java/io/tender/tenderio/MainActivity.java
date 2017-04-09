@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                textView.setText("Login Successful!\n" + loginResult.getAccessToken().getUserId()
-                + "\n" + loginResult.getAccessToken().getToken());
+                textView.setText("Login Successful!\n" + "Welcome " + loginResult.getAccessToken().getUserId());
             }
 
             @Override
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(FacebookException error) {
-
+                textView.setText("Error logging into FaceBook");
             }
 
         });

@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.app.ActionBar;
 
 public class Sliding extends AppCompatActivity {
     private LocationListener locationListener;
@@ -77,4 +78,5 @@ public class Sliding extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.actionbar, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
     }

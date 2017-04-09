@@ -18,22 +18,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.app.ActionBar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.facebook.login.LoginManager;
+
+import static io.tender.tenderio.R.id.nav_logout;
+
 
 public class Sliding extends AppCompatActivity {
     private LocationListener locationListener;
     private LocationManager locationManager;
-    ImageButton Good;
-    ImageButton Bad;
+    ImageButton yes;
+    ImageButton no;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Good = (ImageButton) findViewById(R.id.Good);
-        Bad = (ImageButton) findViewById(R.id.Bad);
-
+        yes = (ImageButton) findViewById(R.id.Good);
+        no = (ImageButton) findViewById(R.id.Bad);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sliding);
-        setContentView(R.layout.buttons);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override
@@ -86,4 +90,6 @@ public class Sliding extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.actionbar, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+
    }

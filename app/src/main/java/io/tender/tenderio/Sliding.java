@@ -17,13 +17,20 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.app.ActionBar;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class Sliding extends AppCompatActivity {
     private LocationListener locationListener;
     private LocationManager locationManager;
+    ImageButton Good;
+    ImageButton Bad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Good = (ImageButton) findViewById(R.id.Good);
+        Bad = (ImageButton) findViewById(R.id.Bad);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sliding);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
@@ -78,5 +85,4 @@ public class Sliding extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.actionbar, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
-    }
+   }

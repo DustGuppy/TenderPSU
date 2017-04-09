@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageButton
@@ -11,25 +13,21 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="65dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginRight="67dp"
+        android:layout_marginBottom="63dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
         android:background="@drawable/com_facebook_auth_dialog_background"
-        android:state_pressed="true"
-        android:visibility="visible"
         app:srcCompat="@drawable/checkmark" />
 
     <ImageButton
         android:id="@+id/Bad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/Good"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
-        android:layout_toLeftOf="@+id/Good"
-        android:layout_toStartOf="@+id/Good"
         android:background="@drawable/com_facebook_auth_dialog_background"
-        android:state_pressed="true"
-        android:visibility="visible"
-        app:srcCompat="@drawable/closemark" />
+        app:srcCompat="@drawable/closemark"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_alignTop="@+id/Good"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

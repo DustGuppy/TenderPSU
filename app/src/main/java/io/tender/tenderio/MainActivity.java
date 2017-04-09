@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                textView.setText("Login Successful!\n" + "Welcome " + loginResult.getAccessToken().getUserId());
+
             }
 
             @Override
